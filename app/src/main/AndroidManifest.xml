@@ -39,6 +39,17 @@
         <activity
             android:name=".Sm2ChangeActivity"
             android:label="@string/sm2_key_change" />
+        <activity
+            android:name=".Sm3Activity"
+            android:label="@string/sm3_algorithm_tool" />
+        <activity
+            android:name=".Sm4Activity"
+            android:label="@string/sm4_algorithm_tool" />
+        <activity
+            android:name=".Base64Activity"
+            android:label="@string/base64_algorithm_tool" />
+        <activity android:name=".EncodingBinaryConversionActivity"
+            android:label="@string/encoding_binary_conversion"/>
     </application>
 
 </manifest>

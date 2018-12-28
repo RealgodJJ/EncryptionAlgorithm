@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sm2Activity">
+    tools:context=".Base64Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,12 +103,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/bt_generate_key_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/generate_key_file" />
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -148,110 +142,6 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/tv_signature_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/signature_content"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/et_signature_content"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginEnd="10dp"
-                android:layout_toEndOf="@id/tv_signature_content"
-                android:background="@drawable/et_background"
-                tools:ignore="Autofill,LabelFor,TextFields" />
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tv_key_format"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/key_format"
-                android:textSize="20sp" />
-
-            <RadioGroup
-                android:id="@+id/rg_key_format"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rb_key_bin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bin" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_hex"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/hex" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_str"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/str" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_byte"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/_byte" />
-
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/tv_key_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/key_content"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/bt_choose_key_file"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_key_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/choose_file" />
-
-            <EditText
-                android:id="@+id/et_key_content"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginEnd="10dp"
-                android:layout_toEndOf="@id/tv_key_content"
-                android:background="@drawable/et_background"
-                tools:ignore="Autofill,LabelFor,TextFields" />
-
-        </RelativeLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -284,22 +174,74 @@
                     android:layout_marginStart="10dp"
                     android:text="@string/decrypt" />
 
-                <RadioButton
-                    android:id="@+id/rb_signature"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/signature" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_handler_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/handler_mode"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_handler_mode_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb_verify"
+                    android:id="@+id/rb_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_default" />
+
+                <RadioButton
+                    android:id="@+id/rb_no_padding"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/verify" />
+                    android:text="@string/no_padding" />
 
             </RadioGroup>
 
         </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_handler_mode_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_no_wrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/no_wrap" />
+
+            <RadioButton
+                android:id="@+id/rb_url_safe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/url_safe" />
+
+            <RadioButton
+                android:id="@+id/rb_crlf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/crlf" />
+
+        </RadioGroup>
 
         <RelativeLayout
             android:layout_width="match_parent"

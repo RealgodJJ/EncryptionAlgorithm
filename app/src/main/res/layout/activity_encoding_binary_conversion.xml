@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sm2Activity">
+    tools:context=".EncodingBinaryConversionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
                 android:id="@+id/tv_file_code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/code_style"
+                android:text="@string/file_code"
                 android:textSize="20sp" />
 
             <RadioGroup
@@ -53,7 +53,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -67,23 +67,70 @@
                 android:textSize="20sp" />
 
             <RadioGroup
-                android:id="@+id/rg_input_format"
+                android:id="@+id/rg_input_format_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_input_format"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb_bin"
+                    android:id="@+id/rb_unicode_bin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/bin" />
+                    android:text="@string/unicode_bin" />
 
                 <RadioButton
-                    android:id="@+id/rb_hex"
+                    android:id="@+id/rb_utf8_bin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/hex" />
+                    android:text="@string/utf8_bin" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg_input_format_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_input_format"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_gbk_bin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gbk_bin" />
+
+                <RadioButton
+                    android:id="@+id/rb_unicode_hex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/unicode_hex" />
+
+                <RadioButton
+                    android:id="@+id/rb_utf8_hex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/utf8_hex" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg_input_format_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rg_input_format_2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_gbk_hex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gbk_hex" />
 
                 <RadioButton
                     android:id="@+id/rb_str"
@@ -93,21 +140,68 @@
                     android:text="@string/str" />
 
                 <RadioButton
-                    android:id="@+id/rb_byte"
+                    android:id="@+id/rb_unicode_byte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/_byte" />
+                    android:text="@string/unicode_byte" />
+
+                <RadioButton
+                    android:id="@+id/rb_utf8_byte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/utf8_byte" />
 
             </RadioGroup>
 
-        </LinearLayout>
+            <RadioGroup
+                android:id="@+id/rg_input_format_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rg_input_format_3"
+                android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/bt_generate_key_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/generate_key_file" />
+                <RadioButton
+                    android:id="@+id/rb_gbk_byte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gbk_byte" />
+
+                <RadioButton
+                    android:id="@+id/rb_unicode_base64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/unicode_base64" />
+
+                <RadioButton
+                    android:id="@+id/rb_uft8_base64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/uft8_base64" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg_input_format_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rg_input_format_4"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_gbk_base64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gbk_base64" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -151,179 +245,158 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/tv_signature_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/signature_content"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/et_signature_content"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginEnd="10dp"
-                android:layout_toEndOf="@id/tv_signature_content"
-                android:background="@drawable/et_background"
-                tools:ignore="Autofill,LabelFor,TextFields" />
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_key_format"
+                android:id="@+id/tv_output_format"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/key_format"
+                android:text="@string/target_format"
                 android:textSize="20sp" />
 
             <RadioGroup
-                android:id="@+id/rg_key_format"
+                android:id="@+id/rg_output_format_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tv_output_format"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb_key_bin"
+                    android:id="@+id/rb_target_unicode_bin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/bin" />
+                    android:text="@string/unicode_bin" />
 
                 <RadioButton
-                    android:id="@+id/rb_key_hex"
+                    android:id="@+id/rb_target_utf8_bin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/hex" />
+                    android:text="@string/utf8_bin" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg_output_format_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_output_format"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb_key_str"
+                    android:id="@+id/rb_target_gbk_bin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gbk_bin" />
+
+                <RadioButton
+                    android:id="@+id/rb_target_unicode_hex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/unicode_hex" />
+
+                <RadioButton
+                    android:id="@+id/rb_target_utf8_hex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/utf8_hex" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg_output_format_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rg_output_format_2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_target_gbk_hex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gbk_hex" />
+
+                <RadioButton
+                    android:id="@+id/rb_target_str"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="@string/str" />
 
                 <RadioButton
-                    android:id="@+id/rb_key_byte"
+                    android:id="@+id/rb_target_unicode_byte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/_byte" />
+                    android:text="@string/unicode_byte" />
+
+                <RadioButton
+                    android:id="@+id/rb_target_utf8_byte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/utf8_byte" />
 
             </RadioGroup>
 
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/tv_key_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/key_content"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/bt_choose_key_file"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_key_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/choose_file" />
-
-            <EditText
-                android:id="@+id/et_key_content"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginEnd="10dp"
-                android:layout_toEndOf="@id/tv_key_content"
-                android:background="@drawable/et_background"
-                tools:ignore="Autofill,LabelFor,TextFields" />
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tv_operate_mode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/operate_mode"
-                android:textSize="20sp" />
-
             <RadioGroup
-                android:id="@+id/rg_operate_mode"
+                android:id="@+id/rg_output_format_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/rg_output_format_3"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rb_encryption"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/encryption" />
-
-                <RadioButton
-                    android:id="@+id/rb_decrypt"
+                    android:id="@+id/rb_target_gbk_byte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/decrypt" />
+                    android:text="@string/gbk_byte" />
 
                 <RadioButton
-                    android:id="@+id/rb_signature"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/signature" />
-
-                <RadioButton
-                    android:id="@+id/rb_verify"
+                    android:id="@+id/rb_target_unicode_base64"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="@string/verify" />
+                    android:text="@string/unicode_base64" />
+
+                <RadioButton
+                    android:id="@+id/rb_target_uft8_base64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/uft8_base64" />
 
             </RadioGroup>
 
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bt_handler"
+            <RadioGroup
+                android:id="@+id/rg_output_format_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:text="@string/handler"
-                tools:ignore="ButtonStyle" />
+                android:layout_below="@id/rg_output_format_4"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/bt_change_system_code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="50dp"
-                android:text="@string/system_code_change"
-                tools:ignore="ButtonStyle,RelativeOverlap" />
+                <RadioButton
+                    android:id="@+id/rb_target_gbk_base64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/gbk_base64" />
+
+            </RadioGroup>
 
         </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/change" />
 
         <RelativeLayout
             android:layout_width="match_parent"

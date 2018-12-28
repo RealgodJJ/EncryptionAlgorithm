@@ -81,18 +81,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.bt_sm2_change:
+                startActivity(new Intent(MainActivity.this, Sm2ChangeActivity.class));
                 break;
 
             case R.id.bt_sm3:
+                startActivity(new Intent(MainActivity.this, Sm3Activity.class));
                 break;
 
             case R.id.bt_sm4:
+                startActivity(new Intent(MainActivity.this, Sm4Activity.class));
                 break;
 
             case R.id.bt_base64:
+                startActivity(new Intent(MainActivity.this, Base64Activity.class));
                 break;
 
             case R.id.bt_change_between_system_code:
+                startActivity(new Intent(MainActivity.this, EncodingBinaryConversionActivity.class));
                 break;
         }
     }

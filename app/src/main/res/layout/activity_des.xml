@@ -11,47 +11,47 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_file_code"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:text="@string/code_style"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_file_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_code_style"
+            <RadioButton
+                android:id="@+id/rb_utf8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/code_style"
-                android:textSize="20sp" />
+                android:text="@string/utf_8" />
 
-            <RadioGroup
-                android:id="@+id/rg_code_style"
+            <RadioButton
+                android:id="@+id/rb_gbk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginStart="10dp"
+                android:text="@string/gbk" />
 
-                <RadioButton
-                    android:id="@+id/rb_utf8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/utf_8" />
+            <RadioButton
+                android:id="@+id/rb_unicode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/unicode" />
 
-                <RadioButton
-                    android:id="@+id/rb_gbk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/gbk" />
+        </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/rb_unicode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/unicode" />
-
-            </RadioGroup>
-
-        </LinearLayout>
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,7 +109,7 @@
             android:layout_marginTop="10dp">
 
             <TextView
-                android:id="@+id/tv_input_content"
+                android:id="@+id/tv_id_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/input_content"
@@ -119,7 +119,7 @@
                 android:id="@+id/bt_choose_file"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_input_content"
+                android:layout_below="@id/tv_id_a"
                 android:layout_marginTop="10dp"
                 android:text="@string/choose_file" />
 
@@ -132,11 +132,11 @@
                 android:text="@string/input_show" />
 
             <EditText
-                android:id="@+id/et_input_content"
+                android:id="@+id/et_id_a"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginEnd="10dp"
-                android:layout_toEndOf="@id/tv_input_content"
+                android:layout_toEndOf="@id/tv_id_a"
                 android:background="@drawable/et_background"
                 tools:ignore="Autofill,LabelFor,TextFields" />
 

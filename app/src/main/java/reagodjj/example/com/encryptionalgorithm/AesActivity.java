@@ -63,7 +63,7 @@ public class AesActivity extends AppCompatActivity implements RadioButton.OnChec
         rgWorkMode2 = findViewById(R.id.rg_work_mode_2);
         rbOfb = findViewById(R.id.rb_ofb);
         rbCtr = findViewById(R.id.rb_ctr);
-        rgCodeStyle = findViewById(R.id.rg_code_style);
+        rgCodeStyle = findViewById(R.id.rg_file_code);
         rbUtf8 = findViewById(R.id.rb_utf8);
         rbGbk = findViewById(R.id.rb_gbk);
         rbUnicode = findViewById(R.id.rb_unicode);
@@ -72,7 +72,7 @@ public class AesActivity extends AppCompatActivity implements RadioButton.OnChec
         rbHex = findViewById(R.id.rb_hex);
         rbStr = findViewById(R.id.rb_str);
         rbByte = findViewById(R.id.rb_byte);
-        etInputContent = findViewById(R.id.et_input_content);
+        etInputContent = findViewById(R.id.et_id_a);
         rgKeyFormat = findViewById(R.id.rg_key_format);
         rbKeyBin = findViewById(R.id.rb_key_bin);
         rbKeyHex = findViewById(R.id.rb_key_hex);

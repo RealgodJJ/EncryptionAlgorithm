@@ -3,12 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sm2Activity">
+    tools:context=".Sm4Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/work_mode"
+                android:textSize="20sp" />
+
+
+            <RadioGroup
+                android:id="@+id/rg_work_mode_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_ecb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ecb" />
+
+                <RadioButton
+                    android:id="@+id/rb_cbc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cbc" />
+
+            </RadioGroup>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,12 +138,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/bt_generate_key_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/generate_key_file" />
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -143,29 +172,6 @@
                 android:layout_height="150dp"
                 android:layout_marginEnd="10dp"
                 android:layout_toEndOf="@id/tv_id_a"
-                android:background="@drawable/et_background"
-                tools:ignore="Autofill,LabelFor,TextFields" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/tv_signature_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/signature_content"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/et_signature_content"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginEnd="10dp"
-                android:layout_toEndOf="@id/tv_signature_content"
                 android:background="@drawable/et_background"
                 tools:ignore="Autofill,LabelFor,TextFields" />
 
@@ -233,20 +239,71 @@
                 android:text="@string/key_content"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/bt_choose_key_file"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_key_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/choose_file" />
-
             <EditText
                 android:id="@+id/et_key_content"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginEnd="10dp"
                 android:layout_toEndOf="@id/tv_key_content"
+                android:background="@drawable/et_background"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_vector_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vector_format"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_vector_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_vector_bin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bin" />
+
+                <RadioButton
+                    android:id="@+id/rb_vector_hex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/hex" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_init_vector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/init_vector"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_init_vector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/tv_init_vector"
                 android:background="@drawable/et_background"
                 tools:ignore="Autofill,LabelFor,TextFields" />
 
@@ -283,19 +340,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="@string/decrypt" />
-
-                <RadioButton
-                    android:id="@+id/rb_signature"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/signature" />
-
-                <RadioButton
-                    android:id="@+id/rb_verify"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/verify" />
 
             </RadioGroup>
 

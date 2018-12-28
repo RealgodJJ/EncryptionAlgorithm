@@ -57,7 +57,7 @@ public class RsaActivity extends AppCompatActivity implements CompoundButton.OnC
     }
 
     private void initView() {
-        rgCodeStyle = findViewById(R.id.rg_code_style);
+        rgCodeStyle = findViewById(R.id.rg_file_code);
         rbUtf8 = findViewById(R.id.rb_utf8);
         rbGbk = findViewById(R.id.rb_gbk);
         rbUnicode = findViewById(R.id.rb_unicode);
@@ -77,7 +77,7 @@ public class RsaActivity extends AppCompatActivity implements CompoundButton.OnC
         rbKeyLength2048 = findViewById(R.id.rb_key_length_2048);
         btChooseFile = findViewById(R.id.bt_choose_file);
         cbInputShow = findViewById(R.id.cb_input_show);
-        etInputContent = findViewById(R.id.et_input_content);
+        etInputContent = findViewById(R.id.et_id_a);
         rgKeyFormat = findViewById(R.id.rg_key_format);
         rbKeyBin = findViewById(R.id.rb_key_bin);
         rbKeyHex = findViewById(R.id.rb_key_hex);
