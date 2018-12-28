@@ -115,6 +115,22 @@
                 android:text="@string/input_content"
                 android:textSize="20sp" />
 
+            <Button
+                android:id="@+id/bt_choose_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_input_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/choose_file"/>
+
+            <CheckBox
+                android:id="@+id/cb_input_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bt_choose_file"
+                android:layout_marginTop="10dp"
+                android:text="@string/input_show"/>
+
             <EditText
                 android:id="@+id/et_input_content"
                 android:layout_width="match_parent"
@@ -270,6 +286,22 @@
                 android:layout_height="wrap_content"
                 android:text="@string/handler_result"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/bt_save_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_result"
+                android:layout_marginTop="10dp"
+                android:text="@string/save_result" />
+
+            <CheckBox
+                android:id="@+id/cb_output_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bt_save_result"
+                android:layout_marginTop="10dp"
+                android:text="@string/output_show" />
 
             <EditText
                 android:id="@+id/et_result"

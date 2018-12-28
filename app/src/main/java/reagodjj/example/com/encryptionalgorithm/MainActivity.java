@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.bt_rsa:
+                startActivity(new Intent(MainActivity.this, RsaActivity.class));
                 break;
 
             case R.id.bt_sm2:

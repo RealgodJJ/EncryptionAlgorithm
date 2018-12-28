@@ -27,8 +27,12 @@
         <activity
             android:name=".Rc4Activity"
             android:label="@string/rc4_algorithm_tool" />
-        <activity android:name=".AesActivity"
-            android:label="@string/aes_algorithm_tool"/>
+        <activity
+            android:name=".AesActivity"
+            android:label="@string/aes_algorithm_tool" />
+        <activity
+            android:name=".RsaActivity"
+            android:label="@string/rsa_algorithm_tool" />
     </application>
 
 </manifest>
