@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_classic_algorithm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/classic_algorithm"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_guomi_algorithm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/guomi_algorithm"
+        android:textSize="20sp"
+        tools:ignore="RelativeOverlap" />
+
+    <Button
+        android:id="@+id/bt_des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_classic_algorithm"
+        android:layout_alignStart="@id/tv_classic_algorithm"
+        android:layout_alignEnd="@id/tv_classic_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/des" />
+
+    <Button
+        android:id="@+id/bt_3des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_des"
+        android:layout_alignStart="@id/tv_classic_algorithm"
+        android:layout_alignEnd="@id/tv_classic_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/_3des" />
+
+    <Button
+        android:id="@+id/bt_rc4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_3des"
+        android:layout_alignStart="@id/tv_classic_algorithm"
+        android:layout_alignEnd="@id/tv_classic_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/rc4" />
+
+    <Button
+        android:id="@+id/bt_aes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_rc4"
+        android:layout_alignStart="@id/tv_classic_algorithm"
+        android:layout_alignEnd="@id/tv_classic_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/aes" />
+
+    <Button
+        android:id="@+id/bt_rsa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_aes"
+        android:layout_alignStart="@id/tv_classic_algorithm"
+        android:layout_alignEnd="@id/tv_classic_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/rsa" />
+
+    <Button
+        android:id="@+id/bt_sm2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_guomi_algorithm"
+        android:layout_alignStart="@id/tv_guomi_algorithm"
+        android:layout_alignEnd="@id/tv_guomi_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/sm2" />
+
+    <Button
+        android:id="@+id/bt_sm2_change"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_sm2"
+        android:layout_alignStart="@id/tv_guomi_algorithm"
+        android:layout_alignEnd="@id/tv_guomi_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/sm2_change" />
+
+    <Button
+        android:id="@+id/bt_sm3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_sm2_change"
+        android:layout_alignStart="@id/tv_guomi_algorithm"
+        android:layout_alignEnd="@id/tv_guomi_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/sm3" />
+
+    <Button
+        android:id="@+id/bt_sm4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_sm3"
+        android:layout_alignStart="@id/tv_guomi_algorithm"
+        android:layout_alignEnd="@id/tv_guomi_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/sm4" />
+
+    <Button
+        android:id="@+id/bt_base64"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_sm4"
+        android:layout_alignStart="@id/tv_guomi_algorithm"
+        android:layout_alignEnd="@id/tv_guomi_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/base64" />
+
+    <Button
+        android:id="@+id/bt_change_between_system_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_base64"
+        android:layout_alignStart="@id/tv_guomi_algorithm"
+        android:layout_alignEnd="@id/tv_guomi_algorithm"
+        android:layout_marginTop="10dp"
+        android:text="@string/system_code_change" />
+
+</RelativeLayout>
