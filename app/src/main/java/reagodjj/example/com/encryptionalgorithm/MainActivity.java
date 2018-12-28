@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.bt_sm2:
+                startActivity(new Intent(MainActivity.this, Sm2Activity.class));
                 break;
 
             case R.id.bt_sm2_change:

@@ -33,6 +33,12 @@
         <activity
             android:name=".RsaActivity"
             android:label="@string/rsa_algorithm_tool" />
+        <activity
+            android:name=".Sm2Activity"
+            android:label="@string/sm2_algorithm_tool" />
+        <activity
+            android:name=".Sm2ChangeActivity"
+            android:label="@string/sm2_key_change" />
     </application>
 
 </manifest>

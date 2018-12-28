@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RsaActivity">
+    tools:context=".Sm2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,95 +103,11 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/bt_generate_key_file"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/generate_key_length"
-                    android:textSize="20sp" />
-
-                <Button
-                    android:id="@+id/bt_generate_key_file"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="@string/generate_key_file" />
-
-            </LinearLayout>
-
-            <RadioGroup
-                android:id="@+id/rg_key_length_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rb_key_length_512"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_512" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_length_768"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/_768" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_length_1024"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/_1024" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_length_1152"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/_1152" />
-
-            </RadioGroup>
-
-            <RadioGroup
-                android:id="@+id/rg_key_length_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rb_key_length_1280"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_1280" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_length_1976"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/_1976" />
-
-                <RadioButton
-                    android:id="@+id/rb_key_length_2048"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="@string/_2048" />
-
-            </RadioGroup>
-
-        </LinearLayout>
+            android:text="@string/generate_key_file" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -227,6 +143,29 @@
                 android:layout_height="150dp"
                 android:layout_marginEnd="10dp"
                 android:layout_toEndOf="@id/tv_input_content"
+                android:background="@drawable/et_background"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_signature_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signature_content"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_signature_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/tv_signature_content"
                 android:background="@drawable/et_background"
                 tools:ignore="Autofill,LabelFor,TextFields" />
 
@@ -345,6 +284,19 @@
                     android:layout_marginStart="10dp"
                     android:text="@string/decrypt" />
 
+                <RadioButton
+                    android:id="@+id/rb_signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signature" />
+
+                <RadioButton
+                    android:id="@+id/rb_verify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/verify" />
+
             </RadioGroup>
 
         </LinearLayout>
@@ -416,6 +368,3 @@
     </LinearLayout>
 
 </ScrollView>
-
-
-

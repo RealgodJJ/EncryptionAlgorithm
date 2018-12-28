@@ -46,7 +46,7 @@ public class RsaActivity extends AppCompatActivity implements CompoundButton.OnC
     private Button btSaveResult;
     private CheckBox cbOutputShow;
     private EditText etResult;
-
+    private Button btGenerateKeyFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +93,7 @@ public class RsaActivity extends AppCompatActivity implements CompoundButton.OnC
         btSaveResult = findViewById(R.id.bt_save_result);
         cbOutputShow = findViewById(R.id.cb_output_show);
         etResult = findViewById(R.id.et_result);
+        btGenerateKeyFile = findViewById(R.id.bt_generate_key_file);
 
         rbKeyLength512.setOnCheckedChangeListener(this);
         rbKeyLength768.setOnCheckedChangeListener(this);

@@ -48,7 +48,6 @@
     <string name="init_vector">初始向量：</string>
     <string name="rsa_algorithm_tool">RSA加密算法处理工具</string>
     <string name="generate_key_length">生成密钥-密钥长度</string>
-    <string name="generate_key_file">生成密钥文件</string>
     <string name="_512">512</string>
     <string name="_768">768</string>
     <string name="_1024">1024</string>
@@ -60,4 +59,10 @@
     <string name="input_show">输入显示</string>
     <string name="save_result">保存结果</string>
     <string name="output_show">输出显示</string>
+    <string name="generate_key_file">生成密钥文件</string>
+    <string name="signature_content">签名内容：</string>
+    <string name="signature">签名</string>
+    <string name="verify">验证</string>
+    <string name="sm2_algorithm_tool">SM2加密算法处理工具</string>
+    <string name="sm2_key_change">SM2密钥交换协议</string>
 </resources>
